@@ -9,11 +9,16 @@
 
 ## Installation
 
-### Using Git and the install script
-
 You can clone the repository wherever you want. The install script will backup your current dotfiles and copy the new ones to your home folder.
 
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && ./install.sh
+git clone https://github.com/ompemi/dotfiles.git && cd dotfiles && ./install.sh
 ```
 
+## Uninstall
+
+To restore the previous dotfiles:
+
+```bash
+cd <repository_path> && mv -f original/.* ~/
+```
