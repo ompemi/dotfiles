@@ -172,7 +172,7 @@ alias today='date +"%A, %B %d, %Y"'
 alias recent='ls -lAt | head'
 
 alias curl="curl -I"        
-alias myhttpserver="python -m SimpleHTTPServer"
+alias httpserver="python -m SimpleHTTPServer"
 alias fixdropbox='sudo echo 100000 | sudo tee /proc/sys/fs/inotify/max_user_watches'
 
 alias sshpkey='cat ~/.ssh/id_rsa.pub | ssh $1 "cat - >> ~/.ssh/authorized_keys2"'
@@ -192,7 +192,7 @@ alias myexamplecmd="
     echo 'find . -maxdepth 3 -type d -exec xx \;';
     echo 'find ./* -name '*.json' -print | xargs grep 'http:' | tail';
     echo '';
-    echo 'for i in `seq -w 053 081`; do echo
+    echo 'for i in \$(seq -w 053 081); do echo;';
     echo '  http://$i.mp3;';
     echo 'done | xargs -n 1 -P 5 wget';
     echo 'awk '{sum=sum+$1}END{print sum ' TB'}'';
