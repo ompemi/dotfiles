@@ -1,0 +1,44 @@
+startup_message off
+caption always "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %{=b BW} %H %{-} %l %c %d/%m/%Y"
+bindkey ^[, prev
+bindkey ^[; next
+shelltitle ""
+autodetach on
+defscrollback 65000
+
+termcapinfo xterm* ti@:te@
+
+# get rid of annoying flicker on tab completion
+vbell off
+
+termcapinfo xterm* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+defhstatus "screen ^E (^Et) | $USER@^EH"
+
+caption always # activates window caption
+caption string '%{= wk}[ %{k}%H %{k}][%= %{= wk}%?%-Lw%?%{r}(%{r}%n*%f%t%?(%u)%?%{r})%{k}%?%+Lw%?%?%= %{k}][%{b} %d/%m %{k}%c %{k}]' # good looking window bar
+
+bindkey -k k5 prev # F5 for previous window
+bindkey -k k6 next # F6 for next window
+
+screen -t bash1 1  
+screen -t bash2 2  
+
+######### CALENDARBIN
+#screen -t "general"
+
+#screen -t "bin-node"
+#chdir ~/Desktop/Dropbox/sandbox-dev/node.js/testing/project
+#stuff "nodemon app.js"
+
+#screen -t "bin-backbone"
+#chdir ~/Desktop/Dropbox/sandbox-dev/node.js/calendarbin/fullcalendar-1.5.2
+#stuff "python -m SimpleHTTPServer"
+
+#screen -t "bin-mongo"
+#chdir ~/other/software
+#stuff "./mongodb-linux-i686-2.0.2/bin/mongod"
+
+######### TIPS
+# To enter scrollback hit C-a [. A status line will indicate that you've entered copy mode. To exit scrollback mode, hit # the escape button.
+# / -    Search forward
+# ? -    Search backward
