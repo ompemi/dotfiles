@@ -268,13 +268,16 @@ case $1 in
   "home-android")
     cd /home/ompemi/workspaces/eclipse-3.5/android/ ;;
   "cern-zend")
-    cd /root/Zend/workspaces/DefaultWorkspace7/ ;;    
+    cd /root/Zend/workspaces/DefaultWorkspace7/ ;;
+  "cern-afs")
+    cd /afs/cern.ch/user/p/peram/ ;;
   *)
     echo "Options:"
     echo ""
     echo "  home-python"
     echo "  home-android"
     echo "  cern-zend"
+    echo "  cern-afs"
 esac
 }
 
