@@ -215,6 +215,10 @@ alias myexamplegit="
     echo 'git diff --cached'
     echo 'git add -p'
     echo 'git checkout -- FILES # Remove unstaged changes'
+    echo ''
+    echo 'git checkout -b hotfix/ompemi/mybugfix'
+    echo 'git push -u origin hotfix/ompemi/mybugfix # after your commits'
+    echo 'git compare master..hotfix/ompemi/mybugfix'
     echo 'git commit --amend'
     echo '';
     echo '# Workflow branch';
