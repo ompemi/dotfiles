@@ -208,8 +208,17 @@ alias myexamplecmd="
 alias myexamplegit="
     echo 'git clone -b devel ssh://peram@gitgw.cern.ch:10022/punch-modules';
     echo 'git config --global user.name 'Omar Pera'';
-    echo 'git config --global user.email peram@cern.ch';
+    echo 'git config --global user.email campbell.sx@gmail.com';
     echo '';
+    echo 'git commit --amend'
+    echo ''
+    echo 'git diff --cached'
+    echo 'git add -p'
+    echo 'git checkout -- FILES # Remove unstaged changes'
+    echo ''
+    echo 'git checkout -b hotfix/ompemi/mybugfix'
+    echo 'git push -u origin hotfix/ompemi/mybugfix # after your commits'
+    echo 'git compare master..hotfix/ompemi/mybugfix'
     echo 'git commit --amend'
     echo '';
     echo '# Workflow branch';
